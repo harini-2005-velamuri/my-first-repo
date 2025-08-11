@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TinySite — A Small Website</title>
+  <style>
+    :root{ --bg:#f7f6f2; --accent:#8b3c5b; --accent-2:#f2c57c; --muted:#555; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#222}
+    header{background:linear-gradient(90deg,var(--accent),#6b2f46);color:white;padding:28px 20px}
+    .container{max-width:980px;margin:0 auto;padding:20px}
+    nav{display:flex;gap:12px;align-items:center}
+    .logo{font-weight:700;font-size:1.2rem}
+    nav a{color:rgba(255,255,255,0.9);text-decoration:none;padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,0.06)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;padding:40px 0}
+    .hero h1{margin:0 0 10px;font-size:clamp(1.6rem,3vw,2.2rem)}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(30,30,30,0.06)}
+
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .feature{padding:16px;border-radius:10px}
+
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);text-align:center}
+
+    /* small screens */
+    @media (max-width:760px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">TinySite</div>
+        <div style="flex:1"></div>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>Welcome to TinySite</h1>
+          <p style="color:var(--muted);margin:0 0 14px">A tiny, responsive one-page website template — perfect for demos or quick prototypes.</p>
+          <p style="margin:0 0 16px">Use this as a starting point: edit the text, swap colors, or add your own sections.</p>
+          <a href="#features" style="display:inline-block;padding:10px 14px;background:var(--accent-2);border-radius:8px;text-decoration:none;font-weight:600;color:#5a3a18">See features</a>
+        </div>
+
+        <div class="features" id="features">
+          <div class="card feature"> 
+            <h3 style="margin:0 0 8px">Responsive</h3>
+            <p style="margin:0;color:var(--muted)">Works on phones, tablets and desktops without extra effort.</p>
+          </div>
+          <div class="card feature"> 
+            <h3 style="margin:0 0 8px">Clean</h3>
+            <p style="margin:0;color:var(--muted)">Minimal markup and CSS makes it easy to customize.</p>
+          </div>
+          <div class="card feature"> 
+            <h3 style="margin:0 0 8px">Single File</h3>
+            <p style="margin:0;color:var(--muted)">Everything is in one HTML file — quick to share and edit.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Contact</h3>
+          <p style="margin:6px 0;color:var(--muted)">Email: hello@tinysite.example</p>
+          <p style="margin:6px 0;color:var(--muted)">Location: Remote</p>
+          <div style="margin-top:12px">
+            <button style="padding:10px 12px;border-radius:8px;border:none;background:var(--accent);color:white;cursor:pointer">Get in touch</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer id="contact">
+      <div class="card">
+        <p style="margin:6px 0;color:var(--muted)">© 2025 TinySite • Built with a single HTML file.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
